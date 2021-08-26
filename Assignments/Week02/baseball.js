@@ -23,15 +23,6 @@ function randnum(){
 function init()
 {
     howmany++;
-/*     if(howmany>9)
-    {
-        if (confirm("게임 횟수를 초과했어요! 리셋 할까요?") == true){
-            location.reload();
-            return 0;
-        }else{
-            howmany = 9;
-        }
-    }   */
     let i=0;
     while(i<3)
     {
