@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>숫자 야구 게임</title>    
+</head>
+<script src="./baseball.js"></script>
+<body>
+<div align="center">
+<div><h1>숫자 야구 게임</h1></div>
+<div><span id="result">숫자 3개를 입력 후에 도전 버튼을 눌러주세요</span></div>
+<div style="margin-top:10px;margin-bottom:5px;"> 
+    <form>
+        <input type="number" id="baseball_1" size="1" />
+        <input type="number" id="baseball_2" size="1" />
+        <input type="number" id="baseball_3" size="1" />
+        <input type="button" id="try" value="도전" onclick="init();"/>
+        <input style="display:none" type="button" id="retry" value="다시 시작하기" onclick="location.reload();"/>
+    </form>  
+</div>
+  
+</div>
+
+
+
+</body>
+</html>
