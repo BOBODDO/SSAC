@@ -7,7 +7,7 @@ do{
     randnum();
 }while(random_number[0]===random_number[1] || random_number[1]===random_number[2] || random_number[2]===random_number[0])
 
-alert('컴퓨터 : '+random_number[0]+random_number[1]+random_number[2]);
+console.log('컴퓨터 : '+random_number[0]+random_number[1]+random_number[2]);
 
 // 1~9사이의 랜덤한 숫자를 배열에다가 입력합니다
 function randnum(){ 
