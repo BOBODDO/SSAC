@@ -23,6 +23,10 @@ function randnum(){
 function init()
 {
     howmany++;
+    if(howmany>1)
+    {
+        save_result(); //2회차부터 이전 결과를 저장합니다
+    }
     let i=0;
     while(i<3)
     {
@@ -30,7 +34,6 @@ function init()
         i++;
     }
     compare();
-
 }
 
 // 입력한 숫자와 컴퓨터가 생성한 숫자를 비교해서 Ball,Strike를 계산합니다.
@@ -52,15 +55,16 @@ function compare()
     if(S==3 && howmany<=9)
     {
         alert('승리했습니다!');
-        document.getElementById('result').innerText = '결과 : '+B+'B'+S+'S '+howmany+'회차(승리)';
+        document.getElementById('result').innerHTML = '결과 : '+B+'B'+S+'S '+howmany+'회차<font color="blue"><b>(승리)</b></font>';
         show_reset();
+        
 
     }else if(S!=3 && howmany>8){
         alert('패배했습니다!');
-        document.getElementById('result').innerText = '결과 : '+B+'B'+S+'S '+howmany+'회차(패배)';
+        document.getElementById('result').innerHTML = '결과 : '+B+'B'+S+'S '+howmany+'회차<font color="red"><b>(패배)</b></font>';
         show_reset();
     }else{
-        document.getElementById('result').innerText = '결과 : '+B+'B'+S+'S '+howmany+'회차';
+        document.getElementById('result').innerHTML = '결과 : '+B+'B'+S+'S '+howmany+'회차';
     }
 
 }
@@ -84,4 +88,9 @@ function show_reset()
 {
     document.getElementById('try').style.display = "none";
     document.getElementById('retry').style.display = "";
+}
+
+function save_result()
+{
+    document.getElementById('scoreboard').innerHTML += (document.getElementById('result').innerText + '<br/>');
 }
