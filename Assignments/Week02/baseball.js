@@ -52,7 +52,7 @@ function compare()
     if(S==3 && howmany<=9)
     {
         alert('승리했습니다!');
-        document.getElementById('result').innerText = '결과 : '+B+'B'+S+'S '+howmany+'회차(패배)';
+        document.getElementById('result').innerText = '결과 : '+B+'B'+S+'S '+howmany+'회차(승리)';
         show_reset();
 
     }else if(S!=3 && howmany>8){
