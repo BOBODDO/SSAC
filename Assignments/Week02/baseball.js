@@ -7,7 +7,7 @@ do{
     randnum();
 }while(random_number[0]===random_number[1] || random_number[1]===random_number[2] || random_number[2]===random_number[0])
 
-console.log('컴퓨터 : '+random_number[0]+random_number[1]+random_number[2]);
+alert('컴퓨터 : '+random_number[0]+random_number[1]+random_number[2]);
 
 // 1~9사이의 랜덤한 숫자를 배열에다가 입력합니다
 function randnum(){ 
@@ -55,16 +55,16 @@ function compare()
     if(S==3 && howmany<=9)
     {
         alert('승리했습니다!');
-        document.getElementById('result').innerHTML = '결과 : '+B+'B'+S+'S '+howmany+'회차<font color="blue"><b>(승리)</b></font>';
+        show_result(B,S,'win');
         show_reset();
         
 
     }else if(S!=3 && howmany>8){
         alert('패배했습니다!');
-        document.getElementById('result').innerHTML = '결과 : '+B+'B'+S+'S '+howmany+'회차<font color="red"><b>(패배)</b></font>';
+        show_result(B,S,'defeat');
         show_reset();
     }else{
-        document.getElementById('result').innerHTML = '결과 : '+B+'B'+S+'S '+howmany+'회차';
+        show_result(B,S);
     }
 
 }
@@ -88,6 +88,18 @@ function show_reset()
 {
     document.getElementById('try').style.display = "none";
     document.getElementById('retry').style.display = "";
+}
+
+function show_result(B,S,result)
+{
+    document.getElementById('result').innerHTML = howmany+'회차 결과 : '+B+'B'+S+'S ('+input_number[0]+input_number[1]+input_number[2]+')';
+    if(result == 'win')
+    {
+        document.getElementById('result').innerHTML += '<font color="blue"><b>(승리)</b></font>';
+    }else if(result == 'defeat')
+    {
+        document.getElementById('result').innerHTML += '<font color="red"><b>(패배)</b></font>';
+    }
 }
 
 function save_result()
