@@ -37,6 +37,6 @@ Continue 옵션이면 > 에러 발생 후 exception 부분을 받아서 처리�
 
 #group_concat 값을 orderby 하기 위해서 cursor을 사용해보자(프로시저 내부에서)
 call sp_grade_stem_leaf('역사');
-
+#끝
 
 

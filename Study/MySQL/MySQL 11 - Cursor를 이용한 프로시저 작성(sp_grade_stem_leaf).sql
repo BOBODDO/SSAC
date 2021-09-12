@@ -55,3 +55,4 @@ delimiter ;
 
 #order by를 뷰에서 하면 인덱스가 없는 쿼리이므로 성능이 굉장히 나빠진다
 #VIEW에서 뽑아내고 나서 orderr by를 하는게 낫다
+#끝
