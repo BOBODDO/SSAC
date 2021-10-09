@@ -28,3 +28,6 @@ Temporary Items
 
 #node
 node_modules
+
+#extensions
+.prettierrc
