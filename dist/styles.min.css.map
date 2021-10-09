@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,IAAI,AAAA,CACA,SAAS,CAHR,IAAI,CAIR",
+    "sources": [
+        "../Css/styles.scss"
+    ],
+    "names": [],
+    "file": "styles.min.css"
+}
